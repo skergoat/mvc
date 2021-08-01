@@ -3,14 +3,14 @@ header {
     max-height:700px;
     overflow:hidden;
 }
+header img {
+    position:relative;
+    top:-100px;
+}
 .main-title {
     padding:50px;
     background:white;
     position:absolute;
     top:40%;
     left:30%;
-}
-header img {
-    position:relative;
-    top:-100px;
 }

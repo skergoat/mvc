@@ -10,11 +10,17 @@ ob_start(); ?>
         <h1>Faites un voyage inoubliable</h1>
     </div>
 </header>
-
-<div class="container">
-
-
-</div>
+<?php if(!empty($places)) { ?>
+    <ul>
+        <?php foreach($places as $places) { ?>
+        <li><?= $places["name"] ?></li>
+        <?php } ?>
+    </ul>
+<?php } else { ?>
+    <div class="alert alert-warning mt-5 col-3 mx-auto text-center" role="alert">
+    Aucune destination pour le moment
+    </div>
+<?php } ?>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('layout.php'); ?>
